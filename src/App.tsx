@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Alert from "./componenets/Alert";
 import ListGroup from "./componenets/ListGroup";
 
@@ -13,10 +14,14 @@ function App() {
   const handleSelectedItem = (item: string) => console.log(item);
   const handleButtonClick = () => console.log("Button was Clicked!!");
 
+  const [alertVisible, setAlertVisibility] = useState(false);
+
   return (
     <div>
-      <Alert> Miao</Alert>
-      <button onClick={handleButtonClick}>Print</button>
+      {alertVisible ? (
+        <Alert onClose={() => setAlertVisibility(false)}>Miao</Alert>
+      ) : null}
+      <button onClick={() => setAlertVisibility(true)}>Print</button>
       <ListGroup
         items={items}
         header="Dogs"
