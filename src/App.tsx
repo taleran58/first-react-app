@@ -11,10 +11,12 @@ function App() {
   ];
 
   const handleSelectedItem = (item: string) => console.log(item);
+  const handleButtonClick = () => console.log("Button was Clicked!!");
 
   return (
     <div>
       <Alert> Miao</Alert>
+      <button onClick={handleButtonClick}>Print</button>
       <ListGroup
         items={items}
         header="Dogs"
