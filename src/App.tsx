@@ -12,7 +12,7 @@ function App() {
   ];
 
   const handleSelectedItem = (item: string) => console.log(item);
-  const handleButtonClick = () => console.log("Button was Clicked!!");
+  //const handleButtonClick = () => console.log("Button was Clicked!!");
 
   const [alertVisible, setAlertVisibility] = useState(false);
 
