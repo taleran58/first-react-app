@@ -1,3 +1,4 @@
+import Alert from "./componenets/Alert";
 import ListGroup from "./componenets/ListGroup";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 
   return (
     <div>
+      <Alert> Miao</Alert>
       <ListGroup
         items={items}
         header="Dogs"
